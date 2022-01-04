@@ -42,7 +42,10 @@ class MyHomePage extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
-                    child: Icon(Icons.qr_code, color: Color(0xffDD1155),),
+                    child: Icon(
+                      Icons.qr_code,
+                      color: Color(0xffDD1155),
+                    ),
                   ),
                   CircleAvatar(
                     backgroundImage: NetworkImage(
@@ -119,6 +122,12 @@ class MyHomePage extends StatelessWidget {
             ],
           ),
           Padding(
+            padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
+            child: Divider(
+              color: Colors.grey,
+            ),
+          ),
+          Padding(
             padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
             child: ListView(
               shrinkWrap: true,
@@ -136,55 +145,42 @@ class MyHomePage extends StatelessWidget {
                 ),
                 ListTile(
                   leading: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                      'https://ibank.cbg.com.gh/cbg/images/2.jpg',
-                    ),
+                    backgroundImage: AssetImage('assets/checking2.png'),
                   ),
-                  title: Text('CBG Bank',
+                  title: Text('Checking',
                       style: TextStyle(fontFamily: 'Work Sans', fontSize: 14)),
-                   subtitle: Text('••00123', style: TextStyle(fontFamily: 'Work Sans', fontSize: 10, color: Colors.grey)),
+                  subtitle: Text('••00123',
+                      style: TextStyle(
+                          fontFamily: 'Work Sans',
+                          fontSize: 10,
+                          color: Colors.grey)),
                   trailing: Text(
                     '¢ 3,500',
                     style: TextStyle(
                         color: Color(0xffDD1155),
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Work Sans',
-                        fontSize: 14
-                        ),
-                  ),
-                ),
-                ListTile(
-                   leading: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                      'https://www.ghanayello.com/img/gh/n/1529048486-76-fidelity-bank-ltd.png',
-                    ),
-                  ),
-                  title: Text('Fedility Bank',
-                      style: TextStyle(fontFamily: 'Work Sans', fontSize: 14)),
-                     subtitle: Text('••4409', style: TextStyle(fontFamily: 'Work Sans', fontSize: 10, color: Colors.grey)),
-                  trailing: Text(
-                    '¢ 2,300',
-                    style: TextStyle(
-                        color: Color(0xffDD1155),
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Work Sans', fontSize: 14),
+                        fontSize: 14),
                   ),
                 ),
                 ListTile(
                   leading: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                      'https://cdn.happyghana.com/wp-content/uploads/2020/01/03011456/absa.jpg',
-                    ),
+                    backgroundImage: AssetImage('assets/citi.jpg'),
                   ),
-                  title: Text('ABSA Bank',
+                  title: Text('Savings',
                       style: TextStyle(fontFamily: 'Work Sans', fontSize: 14)),
-                      subtitle: Text('••00923', style: TextStyle(fontFamily: 'Work Sans', fontSize: 10, color: Colors.grey)),
+                  subtitle: Text('••4409',
+                      style: TextStyle(
+                          fontFamily: 'Work Sans',
+                          fontSize: 10,
+                          color: Colors.grey)),
                   trailing: Text(
-                    '¢ 42,443',
+                    'Manual',
                     style: TextStyle(
-                        color: Color(0xffDD1155),
+                        color: Colors.grey,
                         fontWeight: FontWeight.bold,
-                        fontFamily: 'Work Sans', fontSize: 14),
+                        fontFamily: 'Work Sans',
+                        fontSize: 14),
                   ),
                 ),
                 Divider(),
@@ -200,36 +196,42 @@ class MyHomePage extends StatelessWidget {
                 ),
                 ListTile(
                   leading: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1HSvRhLzRhNdsbcaRJo0-pC8uy6jNpLb_p2Wy5o5UraJWGkclqBfb-gPOK143pcv5qvI&usqp=CAU',
-                    ),
+                    backgroundImage: AssetImage('assets/mastercard.png'),
                   ),
                   title: Text('MasterCard',
                       style: TextStyle(fontFamily: 'Work Sans', fontSize: 14)),
-                      subtitle: Text('••5326', style: TextStyle(fontFamily: 'Work Sans', fontSize: 10, color: Colors.grey)),
+                  subtitle: Text('••5326',
+                      style: TextStyle(
+                          fontFamily: 'Work Sans',
+                          fontSize: 10,
+                          color: Colors.grey)),
                   trailing: Text(
                     '¢ 20,220',
                     style: TextStyle(
                         color: Color(0xffDD1155),
                         fontWeight: FontWeight.bold,
-                        fontFamily: 'Work Sans', fontSize: 14),
+                        fontFamily: 'Work Sans',
+                        fontSize: 14),
                   ),
                 ),
                 ListTile(
                   leading: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTJ9R7b67PSi6yQdJ4T3PS_LTHiLMw0m_OUw&usqp=CAU',
-                    ),
+                    backgroundImage: AssetImage('assets/visa.jpeg'),
                   ),
                   title: Text('VISA Premium',
                       style: TextStyle(fontFamily: 'Work Sans', fontSize: 14)),
-                  subtitle: Text('••4441', style: TextStyle(fontFamily: 'Work Sans', fontSize: 10, color: Colors.grey)),
+                  subtitle: Text('••4441',
+                      style: TextStyle(
+                          fontFamily: 'Work Sans',
+                          fontSize: 10,
+                          color: Colors.grey)),
                   trailing: Text(
                     '¢ 10,645.03',
                     style: TextStyle(
                         color: Color(0xffDD1155),
                         fontWeight: FontWeight.bold,
-                        fontFamily: 'Work Sans', fontSize: 14),
+                        fontFamily: 'Work Sans',
+                        fontSize: 14),
                   ),
                 ),
               ],
@@ -240,89 +242,3 @@ class MyHomePage extends StatelessWidget {
     )));
   }
 }
-
-// class _MyHomePageState extends State<MyHomePage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     // This method is rerun every time setState is called, for instance as done
-//     // by the _incrementCounter method above.
-//     //
-//     // The Flutter framework has been optimized to make rerunning build methods
-//     // fast, so that you can just rebuild anything that needs updating rather
-//     // than having to individually change instances of widgets.
-//     return Scaffold(
-//         appBar: AppBar(
-//           // Here we take the value from the MyHomePage object that was created by
-//           // the App.build method, and use it to set our appbar title.
-//           title: Text(widget.title),
-//         ),
-//         body: Container(
-//             padding: EdgeInsets.all(20),
-//             child: ListView(
-//               children: [
-//                 Center(
-//                   child: Padding(
-//                     padding: EdgeInsets.fromLTRB(0, 10, 0, 15),
-//                     child: Text(
-//                       'Balance',
-//                       style: TextStyle(
-//                           color: Colors.grey,
-//                           fontWeight: FontWeight.w600,
-//                           fontFamily: 'Work Sans'),
-//                     ),
-//                   ),
-//                 ),
-//                 Center(
-//                   child: Text(
-//                     '¢22,189.00',
-//                     style: TextStyle(
-//                         color: Colors.black,
-//                         fontWeight: FontWeight.bold,
-//                         fontSize: 30),
-//                   ),
-//                 ),
-//                 Row(
-//                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//                   //crossAxisAlignment: CrossAxisAlignment.center,
-//                   children: [
-//                     Padding(
-//                         padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-//                         child: ElevatedButton(
-//                             onPressed: () {},
-//                             style: ElevatedButton.styleFrom(
-//                                 fixedSize: const Size(150, 50),
-//                                 shape: RoundedRectangleBorder(
-//                                     borderRadius: BorderRadius.circular(40)),
-//                                 primary: Colors.blue,
-//                                 onPrimary: Colors.white),
-//                             child: Text(
-//                               'Add',
-//                               style: TextStyle(
-//                                 color: Colors.white,
-//                                 fontFamily: 'Work Sans',
-//                               ),
-//                             ))),
-//                     Padding(
-//                       padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-//                       child: ElevatedButton(
-//                           onPressed: () {},
-//                           style: ElevatedButton.styleFrom(
-//                               fixedSize: const Size(150, 50),
-//                               shape: RoundedRectangleBorder(
-//                                   borderRadius: BorderRadius.circular(40)),
-//                               primary: Colors.blue,
-//                               onPrimary: Colors.white),
-//                           child: Text(
-//                             'Withdraw',
-//                             style: TextStyle(
-//                               color: Colors.white,
-//                               fontFamily: 'Work Sans',
-//                             ),
-//                           )),
-//                     )
-//                   ],
-//                 )
-//               ],
-//             )));
-//   }
-// }
