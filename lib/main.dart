@@ -14,9 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           appBarTheme: AppBarTheme(
-              backgroundColor: Colors.white,
-              backwardsCompatibility: false,
-              foregroundColor: Colors.black)),
+              backgroundColor: Colors.white, foregroundColor: Colors.black)),
       home: MyHomePage(),
     );
   }
@@ -48,7 +46,7 @@ class MyHomePage extends StatelessWidget {
                     ),
                   ),
                   CircleAvatar(
-                    backgroundImage: AssetImage('assets/avatar.jpeg')),
+                      backgroundImage: AssetImage('assets/avatar.jpeg')),
                 ],
               )
             ],
